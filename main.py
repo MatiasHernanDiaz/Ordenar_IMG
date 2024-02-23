@@ -12,5 +12,6 @@ if __name__ == '__main__':
         destino = sys.argv[2]
     
     for archivo in a.lsArch(ruta):
-        a.moverArchivo(archivo, destino)
+        if(not (archivo in ['main.py' , 'modulo'])):
+            a.moverArchivo(archivo, destino)
     
